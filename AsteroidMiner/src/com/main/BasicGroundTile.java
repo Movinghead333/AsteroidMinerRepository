@@ -1,11 +1,10 @@
 package com.main;
 
-import java.awt.Image;
 
-public class BasicGroundTile extends Maptile{
+public class BasicGroundTile extends MapTile{
 
 	public BasicGroundTile() {
-		super(ImageLoader.BASIC_GROUND_TILE, true);
+		super(ImageLoader.BASIC_GROUND_TILE_TEXTURE, true);
 	}
 
 }

@@ -24,19 +24,24 @@ public class GamePanel extends JPanel implements Runnable, KeyListener{
 	public final int MAP_X = 50;
 	public final int MAP_Y = 50;
 	
-	private final String PLAYER_PATH = "/player";
+	// Animating thread
+	private Thread animator;
+	
+	// Map object which holds the 2d array for the maptiles
+	private TileMap2D map = new TileMap2D(MAP_X, MAP_Y);
+	
+	
 	
 	private int xTileOffset;
 	private int yTileOffset;
 	
-	private Thread animator;
-	//private Map2D map;
+	
 	//private Player player;
 	private Point mouse = new Point();
 	
 	private int xOffset = 16;
 	private int yOffset = 16;
-	
+
 	// test
 	BasicGroundTile bgt = new BasicGroundTile();
 	

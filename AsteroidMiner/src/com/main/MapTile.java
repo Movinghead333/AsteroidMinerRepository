@@ -2,7 +2,7 @@ package com.main;
 
 import java.awt.Image;
 
-public abstract class Maptile {
+public abstract class MapTile {
 	
 	// maptile texture
 	private Image texture;
@@ -16,7 +16,7 @@ public abstract class Maptile {
 	 * @param texture    Image which will be printed in the game
 	 * @param collision  determines if the tile has collision with the player
 	 */
-	public Maptile(Image texture, boolean collision)
+	public MapTile(Image texture, boolean collision)
 	{
 		this.texture = texture;
 		this.collision = collision;

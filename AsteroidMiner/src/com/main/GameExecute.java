@@ -27,7 +27,7 @@ public class GameExecute extends JFrame {
 		setResizable(false);
 		pack();
 		
-		setTitle("Asteoid Miner 0.0");
+		setTitle("Asteroid Miner");
 		setLocationRelativeTo(null);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
