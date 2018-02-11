@@ -8,6 +8,8 @@ import javax.swing.ImageIcon;
 public class ImageLoader {
 	static URL urlLoader;
 	static ImageIcon imageIconLoader;
+	
+	public static Image BASIC_GROUND_TILE = loadImage("/basicgroundtile.png");
 
 	public static Image loadImage(String filePath) {
 		

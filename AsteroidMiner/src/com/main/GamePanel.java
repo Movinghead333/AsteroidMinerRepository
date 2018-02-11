@@ -37,6 +37,9 @@ public class GamePanel extends JPanel implements Runnable, KeyListener{
 	private int xOffset = 16;
 	private int yOffset = 16;
 	
+	// test
+	BasicGroundTile bgt = new BasicGroundTile();
+	
 	
 	
 	/**
@@ -105,7 +108,7 @@ public class GamePanel extends JPanel implements Runnable, KeyListener{
 	@Override
 	public void paintComponent(Graphics g) {
 		super.paintComponent(g);
-		
+		g.drawImage(bgt.getTexture(), 0, 0,  this);
 		renderGame(g);
 		//player.render(g);
 	}
