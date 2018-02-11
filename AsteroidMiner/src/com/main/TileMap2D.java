@@ -1,5 +1,7 @@
 package com.main;
 
+import java.awt.Image;
+
 public class TileMap2D {
 	
 	private MapTile[][] tiles;
@@ -16,7 +18,20 @@ public class TileMap2D {
 	{
 		this.width = width;
 		this.height = height;
-		tiles = new MapTile[width][height];
+		
+		tiles = new MapTile[height][width];
+		
+		for(int x = 0; x < width; x++)
+		{
+			tiles[0][x] = new BorderTile();
+			tiles[height-1][x] = new BorderTile();
+		}
+		
+		for(int y = 0; y < width; y++)
+		{
+			tiles[y][0] = new BorderTile();
+			tiles[y][width-1] = new BorderTile();
+		}
 	}
 	
 	/**
@@ -28,7 +43,7 @@ public class TileMap2D {
 	 */
 	public MapTile getMapTileAtPosition(int x, int y)
 	{
-		return tiles[x][y];
+		return tiles[y][x];
 	}
 	
 	/**
@@ -41,5 +56,10 @@ public class TileMap2D {
 	public void setMapTileAtPosition(int x, int y, MapTile maptile)
 	{
 		tiles[x][y] = maptile;
+	}
+	
+	public Image getMapTileTexture(int x, int y)
+	{
+		return tiles[y][x].getTexture();
 	}
 }
